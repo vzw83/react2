@@ -11,22 +11,22 @@ import Message from "./Message/Message";
 
 
 const Dialogs = (props) => {
-  let dialogs = [
-    { id: 1, name: "Vova" },
-    { id: 2, name: "Andrey" },
-    { id: 3, name: "Sergey" },
-    { id: 4, name: "Olga" },
-    { id: 5, name: "Lexa" },
-  ];
+  // let dialogs = [
+  //   { id: 1, name: "Vova" },
+  //   { id: 2, name: "Andrey" },
+  //   { id: 3, name: "Sergey" },
+  //   { id: 4, name: "Olga" },
+  //   { id: 5, name: "Lexa" },
+  // ];
 
-  let messages = [
-    { id: 1, message: "привет" },
-    { id: 2, message: "как дела?" },
-    { id: 3, message: "учу реакт" },
-  ];
+  // let messages = [
+  //   { id: 1, message: "привет" },
+  //   { id: 2, message: "как дела?" },
+  //   { id: 3, message: "учу реакт" },
+  // ];
 
-  let dialogsElement = dialogs.map( d => <DialogItem name={d.name} id={d.id} />);
-  let messagesElements = messages.map( m => <Message message={m.message} /> );
+  let dialogsElement = props.dialogs.map( d => <DialogItem name={d.name} id={d.id} />);
+  let messagesElements = props.messages.map( m => <Message message={m.message} /> );
 
   return (
     <div className={s.dialogs}>
