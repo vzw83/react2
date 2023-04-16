@@ -45,11 +45,11 @@ const App = (props) => {
         <div className="app-wrapper-content">
           <Routes>
             <Route
-              path="profile"
+              path="/profile"
               render={() => <Profile posts={props.posts} />}
             />
             <Route
-              path="dialogs"
+              path="/dialogs"
               render={() => (
                 <Dialogs dialogs={props.dialogs} messages={props.messages} />
               )}
